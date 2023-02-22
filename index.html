@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add your CSS styles here */
+      body {
+        background-color: black;
+        color: green;
+        font-family: monospace;
+        padding: 20px;
+      }
+      pre {
+        margin: 0;
+      }
+      .terminal-output {
+        padding: 10px;
+        background-color: green;
+        color: black;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+      axosolaman@localhost:~$ <span id="command-input">cat axosolaman.txt </span>
+    </pre>
+    <pre class="terminal-output">
+      Name: Axosolaman
+      
+      
+
+    </pre>
+    <!-- Add your JavaScript code here -->
+    <script>
+      // Get the command input element
+      const commandInput = document.querySelector("#command-input");
+      
+      // Add event listener to update output when command is entered
+      commandInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          if (commandInput.innerText === "show") {
+            document.querySelector(".terminal-output").style.display = "block";
+          } else {
+            document.querySelector(".terminal-output").style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
